@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--页面背景色-->
+    <color name="color_window_background">#121b3c</color>
+    <!--输入框光标的颜色-->
+    <color name="color_accent">#19254d</color>
+    <!--页面标题的背景颜色-->
+    <color name="color_title_background">#4239ae</color>
+
+    <color name="white">#ffffff</color>
+</resources>

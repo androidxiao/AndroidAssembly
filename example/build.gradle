@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+//版本信息配置
+def config = rootProject.ext.android
+//依赖信息配置
+def librarys = rootProject.ext.dependencies
+
+android {
+
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
+    defaultConfig {
+        applicationId config.applicationId
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':latte-ec')
+    provided project(':latte-annotation ')
+    annotationProcessor project(':latte-compiler')
+
+    implementation librarys.design
+    implementation librarys.supportV4
+    implementation librarys.supportV7
+    implementation librarys.recyclerview
+    implementation librarys.constraintlayout
+}

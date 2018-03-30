@@ -1,0 +1,57 @@
+ext {
+
+    //系统配置
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.0.2",
+            minSdkVersion    : 16,
+            targetSdkVersion : 22,
+            supportLibVersion: "26.1.0",
+            constraintLayout : "1.0.2",
+            versionCode      : 1,
+            versionName      : "1.0.0",
+            applicationId    : "com.assembly.app",
+            multidex         : "1.0.1"
+    ]
+
+    //第三方库
+    threePart = [
+            roomRuntime        : "1.+",// Room Google的ORM数据库
+            roomCompiler       : "1.+",
+            lifecycleRuntime   : "1.+",// Lifecycle
+            lifecycleCompiler  : "1.+",
+            lifecycleExtensions: "1.+", //LiveData,ViewModel
+
+            retrofit2          : "2.2.0",
+            rx2Android         : "2.0.1",
+            rxjava2            : "2.0.8",
+            gson               : "2.+",
+
+            MPAndroidChart     : "v3.0.3",
+            androidZxing       : "2.2",
+            permissionManager  : "1.1.7"
+    ]
+
+    dependencies = [
+            design             : "com.android.support:design:${android.supportLibVersion}",
+            supportV4          : "com.android.support:support-v4:${android.supportLibVersion}",
+            supportV7          : "com.android.support:appcompat-v7:${android.supportLibVersion}",
+            cardview           : "com.android.support:cardview-v7:${android.supportLibVersion}",
+            recyclerview       : "com.android.support:recyclerview-v7:${android.supportLibVersion}",
+            constraintlayout   : "com.android.support.constraint:constraint-layout:${android.constraintLayout}",
+            multidex           : "com.android.support:multidex:${android.multidex}",
+            roomRuntime        : "android.arch.persistence.room:runtime:${threePart.roomRuntime}",
+            roomCompiler       : "android.arch.persistence.room:compiler:${threePart.roomCompiler}",
+            lifecycleRuntime   : "android.arch.lifecycle:runtime:${threePart.lifecycleRuntime}",
+            lifecycleCompiler  : "android.arch.lifecycle:compiler:${threePart.roomCompiler}",
+            lifecycleExtensions: "android.arch.lifecycle:extensions:${threePart.lifecycleExtensions}",
+            retrofit2          : "com.squareup.retrofit2:retrofit:${threePart.retrofit2}",
+            rxjava2            : "io.reactivex.rxjava2:rxjava:${threePart.rxjava2}",
+            rx2Android         : "io.reactivex.rxjava2:rxandroid:${threePart.rx2Android}",
+            gson               : "com.google.code.gson:gson:${threePart.gson}",
+            MPAndroidChart     : "com.github.PhilJay:MPAndroidChart:${threePart.MPAndroidChart}",
+            androidZxing       : "cn.yipianfengye.android:zxing-library:${threePart.androidZxing}",
+            permissionManager  : "com.auron:permission-manage:${threePart.permissionManager}"
+    ]
+
+}
