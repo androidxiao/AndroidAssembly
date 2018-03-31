@@ -30,12 +30,22 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':latte-ec')
-    provided project(':latte-annotation ')
+    compileOnly project(':latte-annotation ')
     annotationProcessor project(':latte-compiler')
-
+    implementation project(':latte-core')
     implementation librarys.design
     implementation librarys.supportV4
     implementation librarys.supportV7
     implementation librarys.recyclerview
     implementation librarys.constraintlayout
+
+    //图标
+    implementation librarys.fontawesome
+    implementation librarys.ionicons
+    //butterknife
+    implementation librarys.butterKnife
+    annotationProcessor librarys.butterknifeCompiler
+    //fragmentation、fragmentationSwipeback
+    implementation librarys.fragmentation
+    implementation librarys.fragmentationSwipeback
 }

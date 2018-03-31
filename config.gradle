@@ -16,42 +16,63 @@ ext {
 
     //第三方库
     threePart = [
-            roomRuntime        : "1.+",// Room Google的ORM数据库
-            roomCompiler       : "1.+",
-            lifecycleRuntime   : "1.+",// Lifecycle
-            lifecycleCompiler  : "1.+",
-            lifecycleExtensions: "1.+", //LiveData,ViewModel
+            roomRuntime              : "1.+",// Room Google的ORM数据库
+            roomCompiler             : "1.+",
+            lifecycleRuntime         : "1.+",// Lifecycle
+            lifecycleCompiler        : "1.+",
+            lifecycleExtensions      : "1.+", //LiveData,ViewModel
 
-            retrofit2          : "2.2.0",
-            rx2Android         : "2.0.1",
-            rxjava2            : "2.0.8",
-            gson               : "2.+",
+            retrofit2                : "2.2.0",
+            rx2Android               : "2.0.1",
+            rxjava2                  : "2.0.8",
+            gson                     : "2.+",
 
-            MPAndroidChart     : "v3.0.3",
-            androidZxing       : "2.2",
-            permissionManager  : "1.1.7"
+            MPAndroidChart           : "v3.0.3",
+            androidZxing             : "2.2",
+            permissionManager        : "1.1.7",
+            fontawesome              : "2.2.2",
+            ionicons                 : "2.2.2",
+            fragmentation            : "1.3.3",
+            fragmentationSwipeback   : "1.3.3",
+            butterKnife              : "8.4.0",
+            okIo                     : "1.13.",
+            okhttp3                  : "3.8.1",
+            retrofit2                : "2.3.0",
+            retrofit2ConverterScalars: "2.3.0",
+            avLoadingIndicatorView   : "2.1.3"
     ]
 
     dependencies = [
-            design             : "com.android.support:design:${android.supportLibVersion}",
-            supportV4          : "com.android.support:support-v4:${android.supportLibVersion}",
-            supportV7          : "com.android.support:appcompat-v7:${android.supportLibVersion}",
-            cardview           : "com.android.support:cardview-v7:${android.supportLibVersion}",
-            recyclerview       : "com.android.support:recyclerview-v7:${android.supportLibVersion}",
-            constraintlayout   : "com.android.support.constraint:constraint-layout:${android.constraintLayout}",
-            multidex           : "com.android.support:multidex:${android.multidex}",
-            roomRuntime        : "android.arch.persistence.room:runtime:${threePart.roomRuntime}",
-            roomCompiler       : "android.arch.persistence.room:compiler:${threePart.roomCompiler}",
-            lifecycleRuntime   : "android.arch.lifecycle:runtime:${threePart.lifecycleRuntime}",
-            lifecycleCompiler  : "android.arch.lifecycle:compiler:${threePart.roomCompiler}",
-            lifecycleExtensions: "android.arch.lifecycle:extensions:${threePart.lifecycleExtensions}",
-            retrofit2          : "com.squareup.retrofit2:retrofit:${threePart.retrofit2}",
-            rxjava2            : "io.reactivex.rxjava2:rxjava:${threePart.rxjava2}",
-            rx2Android         : "io.reactivex.rxjava2:rxandroid:${threePart.rx2Android}",
-            gson               : "com.google.code.gson:gson:${threePart.gson}",
-            MPAndroidChart     : "com.github.PhilJay:MPAndroidChart:${threePart.MPAndroidChart}",
-            androidZxing       : "cn.yipianfengye.android:zxing-library:${threePart.androidZxing}",
-            permissionManager  : "com.auron:permission-manage:${threePart.permissionManager}"
+            design                   : "com.android.support:design:${android.supportLibVersion}",
+            supportV4                : "com.android.support:support-v4:${android.supportLibVersion}",
+            supportV7                : "com.android.support:appcompat-v7:${android.supportLibVersion}",
+            cardview                 : "com.android.support:cardview-v7:${android.supportLibVersion}",
+            recyclerview             : "com.android.support:recyclerview-v7:${android.supportLibVersion}",
+            constraintlayout         : "com.android.support.constraint:constraint-layout:${android.constraintLayout}",
+            multidex                 : "com.android.support:multidex:${android.multidex}",
+            roomRuntime              : "android.arch.persistence.room:runtime:${threePart.roomRuntime}",
+            roomCompiler             : "android.arch.persistence.room:compiler:${threePart.roomCompiler}",
+            lifecycleRuntime         : "android.arch.lifecycle:runtime:${threePart.lifecycleRuntime}",
+            lifecycleCompiler        : "android.arch.lifecycle:compiler:${threePart.roomCompiler}",
+            lifecycleExtensions      : "android.arch.lifecycle:extensions:${threePart.lifecycleExtensions}",
+            retrofit2                : "com.squareup.retrofit2:retrofit:${threePart.retrofit2}",
+            rxjava2                  : "io.reactivex.rxjava2:rxjava:${threePart.rxjava2}",
+            rx2Android               : "io.reactivex.rxjava2:rxandroid:${threePart.rx2Android}",
+            gson                     : "com.google.code.gson:gson:${threePart.gson}",
+            MPAndroidChart           : "com.github.PhilJay:MPAndroidChart:${threePart.MPAndroidChart}",
+            androidZxing             : "cn.yipianfengye.android:zxing-library:${threePart.androidZxing}",
+            permissionManager        : "com.auron:permission-manage:${threePart.permissionManager}",
+            fontawesome              : "com.joanzapata.iconify:android-iconify-fontawesome:${threePart.fontawesome}",
+            ionicons                 : "com.joanzapata.iconify:android-iconify-ionicons:${threePart.ionicons}",
+            fragmentation            : "me.yokeyword:fragmentation:${threePart.fragmentation}",
+            fragmentationSwipeback   : "me.yokeyword:fragmentation-swipeback:${threePart.fragmentationSwipeback}",
+            butterKnife              : "com.jakewharton:butterknife:${threePart.butterKnife}",
+            butterknifeCompiler      : "com.jakewharton:butterknife-compiler:${threePart.butterKnife}",
+            okIo                     : "com.squareup.okio:okio:${threePart.okIo}",
+            okhttp3                  : "com.squareup.okhttp3:okhttp:${threePart.okhttp3}",
+            retrofit2                : "com.squareup.retrofit2:retrofit:${threePart.retrofit2}",
+            retrofit2ConverterScalars: "com.squareup.retrofit2:converter-scalars:${threePart.retrofit2ConverterScalars}",
+            avLoadingIndicatorView   : "com.wang.avi:library:${threePart.avLoadingIndicatorView}"
     ]
 
 }

@@ -1,4 +1,4 @@
-package assembly.com.latte.app;
+package app;
 
 /**
  * Created by chawei on 2018/3/30.
