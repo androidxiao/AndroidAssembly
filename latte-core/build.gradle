@@ -56,4 +56,8 @@ dependencies {
     //AvLoadingIndicatorView
     implementation librarys.avLoadingIndicatorView
 
+    implementation librarys.rxjava2
+    implementation librarys.rx2Android
+    implementation librarys.retrofit2Adapter
+
 }

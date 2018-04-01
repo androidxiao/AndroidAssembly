@@ -12,13 +12,13 @@ import app.Latte;
 public class DimenUtil {
 
     public static final int getScreenWidth(){
-        final Resources resources= Latte.getApplication().getResources();
+        final Resources resources= Latte.getApplicationContext().getResources();
         final DisplayMetrics dm=resources.getDisplayMetrics();
         return dm.widthPixels;
     }
 
     public static final int getScreenHeight(){
-        final Resources resources= Latte.getApplication().getResources();
+        final Resources resources= Latte.getApplicationContext().getResources();
         final DisplayMetrics dm=resources.getDisplayMetrics();
         return dm.heightPixels;
     }

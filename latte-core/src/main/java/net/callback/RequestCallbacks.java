@@ -1,5 +1,9 @@
 package net.callback;
 
+import android.os.Handler;
+
+import app.ConfigKeys;
+import app.Latte;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -17,6 +21,7 @@ public class RequestCallbacks implements Callback<String>{
     private final IFailure FAILURE;
     private final IError ERROR;
     private final LoaderStyle LOADER_STYLE;
+    private static final Handler HANDLER = Latte.getHandler();
 
     public RequestCallbacks(IRequest request, ISuccess success, IFailure failure, IError error,LoaderStyle loaderStyle) {
         this.REQUEST = request;
@@ -57,8 +62,14 @@ public class RequestCallbacks implements Callback<String>{
     }
 
     private void stopLoadingView() {
+        final long delayed = Latte.getConfiguration(ConfigKeys.LOADER_DELAYED);
         if (LOADER_STYLE != null) {
-            LatteLoader.stopLoading();
+            HANDLER.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    LatteLoader.stopLoading();
+                }
+            },delayed);
         }
     }
 }

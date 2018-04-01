@@ -21,8 +21,7 @@ ext {
             lifecycleRuntime         : "1.+",// Lifecycle
             lifecycleCompiler        : "1.+",
             lifecycleExtensions      : "1.+", //LiveData,ViewModel
-
-            retrofit2                : "2.2.0",
+            retrofit2Adapter         : "1.0.0",
             rx2Android               : "2.0.1",
             rxjava2                  : "2.0.8",
             gson                     : "2.+",
@@ -55,9 +54,9 @@ ext {
             lifecycleRuntime         : "android.arch.lifecycle:runtime:${threePart.lifecycleRuntime}",
             lifecycleCompiler        : "android.arch.lifecycle:compiler:${threePart.roomCompiler}",
             lifecycleExtensions      : "android.arch.lifecycle:extensions:${threePart.lifecycleExtensions}",
-            retrofit2                : "com.squareup.retrofit2:retrofit:${threePart.retrofit2}",
             rxjava2                  : "io.reactivex.rxjava2:rxjava:${threePart.rxjava2}",
             rx2Android               : "io.reactivex.rxjava2:rxandroid:${threePart.rx2Android}",
+            retrofit2Adapter         : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${threePart.retrofit2Adapter}",
             gson                     : "com.google.code.gson:gson:${threePart.gson}",
             MPAndroidChart           : "com.github.PhilJay:MPAndroidChart:${threePart.MPAndroidChart}",
             androidZxing             : "cn.yipianfengye.android:zxing-library:${threePart.androidZxing}",

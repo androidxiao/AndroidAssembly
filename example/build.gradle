@@ -48,4 +48,10 @@ dependencies {
     //fragmentation、fragmentationSwipeback
     implementation librarys.fragmentation
     implementation librarys.fragmentationSwipeback
+
+    implementation librarys.okhttp3
+
+    implementation librarys.rxjava2
+    implementation librarys.rx2Android
+    implementation librarys.retrofit2Adapter
 }

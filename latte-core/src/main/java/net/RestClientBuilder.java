@@ -20,16 +20,19 @@ import ui.LoaderStyle;
 
 public class RestClientBuilder {
 
-    private String mUrl=null;
+    private String mUrl = null;
     private static final WeakHashMap<String, Object> PARAMS = RestCreator.getParams();
-    private IRequest mRequest=null;
-    private ISuccess mISuccess=null;
-    private IFailure mIFailure=null;
-    private IError mIError=null;
-    private RequestBody mBody=null;
-    private Context mContext=null;
-    private LoaderStyle mLoaderStyle=null;
-    private File mFile=null;
+    private IRequest mRequest = null;
+    private String mDownloadDir = null;
+    private String mExtension = null;
+    private String mName = null;
+    private ISuccess mISuccess = null;
+    private IFailure mIFailure = null;
+    private IError mIError = null;
+    private RequestBody mBody = null;
+    private Context mContext = null;
+    private LoaderStyle mLoaderStyle = null;
+    private File mFile = null;
 
     RestClientBuilder() {
     }
@@ -50,12 +53,27 @@ public class RestClientBuilder {
     }
 
     public final RestClientBuilder file(File file) {
-        this.mFile=file;
+        this.mFile = file;
         return this;
     }
 
     public final RestClientBuilder file(String file) {
-        this.mFile=new File(file);
+        this.mFile = new File(file);
+        return this;
+    }
+
+    public final RestClientBuilder name(String name) {
+        this.mName = name;
+        return this;
+    }
+
+    public final RestClientBuilder dir(String dir) {
+        this.mDownloadDir = dir;
+        return this;
+    }
+
+    public final RestClientBuilder extension(String extension) {
+        this.mExtension = extension;
         return this;
     }
 
@@ -86,12 +104,18 @@ public class RestClientBuilder {
     }
 
     public final RestClientBuilder loader(Context context, LoaderStyle style) {
-        this.mContext=context;
-        this.mLoaderStyle=LoaderStyle.BallSpinFadeLoaderIndicator;
+        this.mContext = context;
+        this.mLoaderStyle = style;
+        return this;
+    }
+
+    public final RestClientBuilder loader(Context context) {
+        this.mContext = context;
+        this.mLoaderStyle = LoaderStyle.BallSpinFadeLoaderIndicator;
         return this;
     }
 
     public final RestClient build() {
-        return new RestClient(mUrl, PARAMS, mRequest, mISuccess, mIFailure, mIError, mBody,mLoaderStyle,mFile,mContext);
+        return new RestClient(mUrl, PARAMS, mRequest, mDownloadDir, mExtension, mName, mISuccess, mIFailure, mIError, mBody, mLoaderStyle, mFile, mContext);
     }
 }
