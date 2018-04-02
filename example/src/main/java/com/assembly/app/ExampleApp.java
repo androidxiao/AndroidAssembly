@@ -1,19 +1,18 @@
 package com.assembly.app;
 
-import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 
-import net.interceptors.DebugInterceptor;
-
-import app.Latte;
+import assembly.com.latte.core.app.Latte;
+import assembly.com.latte.core.net.interceptors.DebugInterceptor;
 import assembly.com.latte.ec.icon.FontEcModule;
 
 /**
  * Created by chawei on 2018/3/30.
  */
 
-public class ExampleApp extends Application{
+public class ExampleApp extends MultiDexApplication{
 
 
     @Override

@@ -8,16 +8,15 @@ import android.widget.Toast;
 
 import com.assembly.app.R;
 
-import net.RestClient;
-import net.RestCreator;
-import net.callback.IError;
-import net.callback.IFailure;
-import net.callback.ISuccess;
-import net.rx.RxRestClient;
-
 import java.util.WeakHashMap;
 
-import delegates.LatteDelegate;
+import assembly.com.latte.core.delegates.LatteDelegate;
+import assembly.com.latte.core.net.RestClient;
+import assembly.com.latte.core.net.RestCreator;
+import assembly.com.latte.core.net.callback.IError;
+import assembly.com.latte.core.net.callback.IFailure;
+import assembly.com.latte.core.net.callback.ISuccess;
+import assembly.com.latte.core.net.rx.RxRestClient;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;

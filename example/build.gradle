@@ -29,16 +29,16 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':latte-ec')
-    compileOnly project(':latte-annotation ')
-    annotationProcessor project(':latte-compiler')
     implementation project(':latte-core')
+    implementation project(':latte-ec')
+    implementation project(':latte-annotation ')
+    annotationProcessor project(':latte-compiler')
     implementation librarys.design
     implementation librarys.supportV4
     implementation librarys.supportV7
     implementation librarys.recyclerview
+    implementation librarys.multidex
     implementation librarys.constraintlayout
-
     //图标
     implementation librarys.fontawesome
     implementation librarys.ionicons
@@ -48,10 +48,9 @@ dependencies {
     //fragmentation、fragmentationSwipeback
     implementation librarys.fragmentation
     implementation librarys.fragmentationSwipeback
-
     implementation librarys.okhttp3
-
     implementation librarys.rxjava2
     implementation librarys.rx2Android
     implementation librarys.retrofit2Adapter
+
 }
